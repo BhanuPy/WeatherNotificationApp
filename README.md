@@ -31,6 +31,7 @@ The API provides the following endpoints:
     /weather-api/ (GET) : Get the current weather info
     /weather-api/subscribe/ (POST): Subscribe to weather updates by providing an email address.
 
+React App Setup :
 
 9. cd weather_app/weather-app-ui
 
@@ -38,4 +39,4 @@ The API provides the following endpoints:
 
 11.   npm start
 
-12.   The app should now be running at http://localhost:3000.    
+12.   The react app should now be running at http://localhost:3000.    
