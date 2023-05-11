@@ -1,0 +1,40 @@
+<!-- weather_forecast.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Forecast</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Weather Forecast for the Next 24 Hours</h2>
+        <hr>
+        {% for entry in weather_data %}
+        <div class="card mb-3">
+            <div class="card-header">
+                Time: {{ entry.time }}
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5 class="card-title">Temperature: {{ entry.temperature }}°C</h5>
+                        <p class="card-text">Weather Report: {{ entry.weather_report }}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="card-title">Humidity: {{ entry.humidity }}%</h5>
+                        <p class="card-text">Precipitation: {{ entry.precipitation }} mm</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="card-title">Windspeed: {{ entry.windspeed }} m/s</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
